@@ -1,0 +1,43 @@
+.moviesContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  transition: all 0.3s linear;
+  width: 90%;
+  margin: auto;
+}
+.moviesContainer > a {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgb(63, 63, 63);
+  font-size: 13px;
+  transition: all 0.3s linear;
+  border: 3px solid gray;
+  padding: 20px 30px;
+}
+.moviesContainer > a h2 {
+  transition: all 0.5s linear;
+}
+.moviesContainer > a:hover {
+  transform: scale(1.1);
+  border: 3px solid white;
+  background-color: gray;
+  color: white;
+  transition: all 0.3s linear;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.moviesContainer > a:hover img {
+  transform: scale(1.1);
+  transition: all 0.4s linear;
+  box-shadow: rgba(255, 255, 255, 0.527) 0px 5px 15px;
+}
+.moviesContainer > a:hover h2 {
+  transform: translateY(-15px);
+  transition: all 0.5s linear;
+}
+.moviesContainer > a > div > img {
+  height: 200px;
+  border-radius: 12px;
+  transition: all 0.4s linear;
+}

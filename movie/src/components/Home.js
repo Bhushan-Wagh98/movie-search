@@ -12,5 +12,3 @@ const Home = () => {
 };
 
 export default Home;
-
-//http://www.omdbapi.com/?apikey=34511c28&s=avengers
