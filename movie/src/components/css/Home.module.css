@@ -3,8 +3,20 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   transition: all 0.3s linear;
-  width: 90%;
+  width: 85%;
   margin: auto;
+}
+@media all and (min-width: 500px) and (max-width: 850px) {
+  .moviesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+@media all and (min-width: 80px) and (max-width: 499px) {
+  .moviesContainer {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
 }
 .moviesContainer > a {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -30,14 +42,21 @@
 .moviesContainer > a:hover img {
   transform: scale(1.1);
   transition: all 0.4s linear;
+  border: none;
   box-shadow: rgba(255, 255, 255, 0.527) 0px 5px 15px;
 }
 .moviesContainer > a:hover h2 {
   transform: translateY(-15px);
+  transform: scale(1.2);
   transition: all 0.5s linear;
 }
 .moviesContainer > a > div > img {
-  height: 200px;
+  /* height: 200px; */
+  width: 130px;
   border-radius: 12px;
   transition: all 0.4s linear;
+  border: 3px solid gray;
+}
+.loading {
+  color: rgb(63, 63, 63);
 }

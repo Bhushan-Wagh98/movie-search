@@ -21,7 +21,6 @@ export const AppProvider = ({ children }) => {
           show: false,
           msg: "",
         });
-        // console.log(data);
       } else {
         setError({
           show: true,
@@ -34,6 +33,9 @@ export const AppProvider = ({ children }) => {
   };
   useEffect(() => {
     let timerOut = setTimeout(() => {
+      if (query === "") {
+        getMovies(`${API_URL}&s=marvel`);
+      }
       getMovies(`${API_URL}&s=${query}`);
     }, 700);
 

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import styles from "./css/Single.module.css";
+import notfound from "./image/notfound.png";
 
 const SingleMovie = () => {
   const { id } = useParams();
@@ -19,7 +21,6 @@ const SingleMovie = () => {
           show: false,
           msg: "",
         });
-        console.log(data);
         setObj(data);
       } else {
         setLoading(false);
@@ -40,14 +41,21 @@ const SingleMovie = () => {
   if (isLoading) {
     return (
       <div>
-        <h2>Loading...</h2>
+        <h2 className={styles.loading}>Loading...</h2>
       </div>
     );
   }
   if (isError.show) {
     return (
       <div>
-        <p>{isError.show && isError.msg}</p>
+        <h1 className={styles.red}>{isError.msg}</h1>
+        <h3>Please click the button below to Redirect to Home page</h3>
+        <Link to={"/"}>
+          <button className={styles.backToHome}>Go Back</button>
+        </Link>
+        <div className={styles.notfound}>
+          <img src={notfound} alt="Not found" />
+        </div>
       </div>
     );
   }

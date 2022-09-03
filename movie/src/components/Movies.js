@@ -9,7 +9,7 @@ const Movies = () => {
   if (isLoading) {
     return (
       <div>
-        <h2>Loading...</h2>
+        <h2 className={styles.loading}>Loading...</h2>
       </div>
     );
   }
@@ -17,7 +17,7 @@ const Movies = () => {
     <div className={styles.moviesContainer}>
       {movies.map((ele) => {
         const { imdbID, Title, Poster } = ele;
-        const movieTitle = Title.substring(0, 15);
+        const movieTitle = Title.substring(0, 12);
         return (
           <NavLink key={imdbID} to={`movie/${imdbID}`}>
             <div>
