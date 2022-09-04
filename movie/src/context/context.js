@@ -26,6 +26,8 @@ export const AppProvider = ({ children }) => {
           show: true,
           msg: data.Error,
         });
+        setMovies([]);
+        setLoading(false);
       }
     } catch (err) {
       console.log(err);
@@ -35,8 +37,9 @@ export const AppProvider = ({ children }) => {
     let timerOut = setTimeout(() => {
       if (query === "") {
         getMovies(`${API_URL}&s=marvel`);
+      } else {
+        getMovies(`${API_URL}&s=${query}`);
       }
-      getMovies(`${API_URL}&s=${query}`);
     }, 700);
 
     return () => clearTimeout(timerOut);

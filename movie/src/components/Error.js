@@ -9,7 +9,7 @@ const Error = () => {
       <h1 className={styles.red}>I think you are on wrong page</h1>
       <h3>Please click the button below to Redirect to Home page</h3>
       <Link to={"/"}>
-        <button className={styles.backToHome}>Go Back</button>
+        <button className={styles.backToHome}>Back to Home</button>
       </Link>
       <div className={styles.notfound}>
         <img src={notfound} alt="Not found" />

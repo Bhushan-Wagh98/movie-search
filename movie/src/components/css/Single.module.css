@@ -28,13 +28,61 @@
 .notfound > img {
   width: 100%;
 }
+.singleContainer {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 70%;
+  margin: 50px auto;
+}
+.singleContainer > div > img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 12px;
+}
+.singleContainer > div > h1 {
+  text-align: center;
+}
+.movieContaint {
+  text-align: left;
+  padding: 0 0 0 50px;
+}
+.recomend {
+  padding: 8px 15px;
+  background-color: gold;
+  color: brown;
+  border-radius: 12px;
+  width: 130px;
+  margin: auto;
+  text-align: center;
+}
+
 @media all and (min-width: 500px) and (max-width: 850px) {
   .notfound {
     width: 80%;
+  }
+  .singleContainer {
+    flex-direction: column;
+    padding: 0;
+  }
+  .movieContaint {
+    padding: 0;
   }
 }
 @media all and (min-width: 80px) and (max-width: 499px) {
   .notfound {
     width: 80%;
+  }
+  .singleContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .movieContaint {
+    padding: 20px;
+  }
+  .singleContainer > div > img {
+    width: 100%;
   }
 }

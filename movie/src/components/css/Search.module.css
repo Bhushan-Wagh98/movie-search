@@ -12,12 +12,32 @@
 .searchDiv > input:focus {
   outline: none;
 }
-@media all and (min-width: 80px) and (max-width: 499px) {
-  .searchDiv > input {
-    width: 80%;
-  }
-}
 
 .red {
   color: red;
+}
+.notfound {
+  width: 40%;
+  margin: 50px auto;
+  text-align: center;
+}
+.notfound > img {
+  width: 100%;
+}
+
+@media all and (min-width: 500px) and (max-width: 850px) {
+  .notfound {
+    width: 80%;
+  }
+  .searchDiv > input {
+    width: 50%;
+  }
+}
+@media all and (min-width: 80px) and (max-width: 580px) {
+  .searchDiv > input {
+    width: 80%;
+  }
+  .notfound {
+    width: 80%;
+  }
 }
