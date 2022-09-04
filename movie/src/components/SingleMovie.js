@@ -68,12 +68,12 @@ const SingleMovie = () => {
         <div>
           <img src={obj.Poster} alt={obj.Title} />
           {+obj.imdbRating > 8 ? (
-            <div className={styles.recomend}>Recomended</div>
+            <div className={styles.recomend}>Recommended</div>
           ) : null}
         </div>
         <div className={styles.movieContaint}>
           <h1>{obj.Title}</h1>
-          <h3>{obj.Type}</h3>
+          <h3 className={styles.type}>{obj.Type}</h3>
           <h3>Genres: {obj.Genre}</h3>
           <h4>Actors: {obj.Actors}</h4>
           <h4>Directors: {obj.Director}</h4>
