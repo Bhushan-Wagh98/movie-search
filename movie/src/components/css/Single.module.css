@@ -46,20 +46,20 @@
   text-align: center;
   color: red;
 }
-img,
-p,
-h1,
-h2,
-h3,
-h4 {
+.singleContainer img,
+.singleContainer p,
+.singleContainer h1,
+.singleContainer h2,
+.singleContainer h3,
+.singleContainer h4 {
   transition: all 0.2s linear;
 }
-img:hover,
-p:hover,
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover {
+.singleContainer img:hover,
+.singleContainer p:hover,
+.singleContainer h1:hover,
+.singleContainer h2:hover,
+.singleContainer h3:hover,
+.singleContainer h4:hover {
   transform: scale(1.03);
   transition: all 0.2s linear;
 }
