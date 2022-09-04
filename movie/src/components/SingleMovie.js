@@ -8,7 +8,7 @@ const SingleMovie = () => {
   const [obj, setObj] = useState({});
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState({ show: false, msg: "" });
-  const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
+  const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
 
   const getMovie = async (url) => {
     setLoading(true);
@@ -30,8 +30,10 @@ const SingleMovie = () => {
           msg: "Movie Not Found!",
         });
       }
+      console.clear();
     } catch (error) {
       console.log(error);
+      console.clear();
     }
   };
 
